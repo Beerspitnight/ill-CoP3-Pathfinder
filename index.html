@@ -3,118 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ill-Co-P3 Project</title>
+  <title>The ill-Co=P3 Project</title>
   <style>
     body {
+      margin: 0;
       background-color: #0f0f0f;
       color: #e0e0e0;
       font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
+      display: flex;
+      flex-direction: row;
     }
 
-    header, footer {
-      text-align: center;
+    aside {
+      width: 250px;
+      background-color: #1a1a1a;
       padding: 2rem 1rem;
-      background-color: #1c1c1c;
+      border-right: 2px solid #2c2c2c;
+      height: 100vh;
     }
 
-    .hero {
-      padding: 4rem 2rem;
-      text-align: center;
-      background-color: #121212;
+    aside h2 {
+      color: #ffcc00;
+      font-size: 1rem;
+      margin-bottom: 1rem;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: auto;
+    aside p {
+      font-size: 0.9rem;
+      line-height: 1.4;
       color: #ccc;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #4db8ff;
-      color: #000;
-      border-radius: 6px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #ffcc00;
-    }
-
-    .footer-links a {
+    aside a {
+      display: block;
+      margin: 0.5rem 0;
       color: #4db8ff;
-      margin: 0 10px;
       text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      overflow-y: auto;
     }
 
     .logo {
-      max-width: 120px;
-      margin-bottom: 1rem;
+      max-width: 80px;
+      margin-bottom: 1.5rem;
       animation: glow 2s infinite alternate;
       filter: drop-shadow(0 0 8px #4db8ff) brightness(1.2);
     }
 
+    section {
+      margin-bottom: 2rem;
+    }
+
+    section h1, section h2 {
+      color: #ffcc00;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.25rem;
+      background-color: #4db8ff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #888;
+    }
+
     @keyframes glow {
-      from {
-        filter: drop-shadow(0 0 8px #4db8ff) brightness(1.2);
-      }
-      to {
-        filter: drop-shadow(0 0 20px #4db8ff) brightness(1.6);
-      }
+      from { filter: drop-shadow(0 0 8px #4db8ff) brightness(1.2); }
+      to { filter: drop-shadow(0 0 20px #4db8ff) brightness(1.6); }
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <aside>
     <img src="logo1.png" alt="ill-Co-P3 Logo" class="logo" />
-    <h1>Welcome to the ill-Co=P3 Project</h1>
-    <p>Pathfinder for graphic design training, tagging, and creative chaos.</p>
-  </header>
+    <h2>COMPANY</h2>
+    <p>This is not a company, nor is it an organization. It’s just a dude who likes to learn new things.</p>
 
-  <div class="hero">
-    <h1>This is Not a Company</h1>
-    <p>It’s just a dude who likes to learn and build cool stuff. The ill-Co-P3 Project is a crowdsourced, AI-powered tool that helps analyze graphic design using principles and elements of art. We’re building a rich dataset by tagging images — and yes, you can help (and yes, it’s free).</p>
-    <a href="https://ill-cp-p3-learns-taggit.streamlit.app/" class="btn">🚀 Launch the App</a>
-  </div>
+    <h2>RESOURCES</h2>
+    <a href="https://ill-cp-p3-learns-taggit.streamlit.app/">Log In</a>
+    <a href="https://ill-cp-p3-learns-taggit.streamlit.app/">Create an Account</a>
+    <a href="https://www.freeprivacypolicy.com/live/50c9c708-de6b-4440-be9e-1aeb972e2321" target="_blank">Privacy Policy</a>
+    <a href="https://www.freeprivacypolicy.com/live/fc8b023b-a292-4e28-a044-56a29102b9f4" target="_blank">Terms of Service</a>
 
-  <section>
-    <h2>How It Works</h2>
-    <p>Log in. View an image. Tag it with key design principles and elements. GPT-4 helps out in the background. Your tags help train the Pathfinder Graphic Design Assistant. And if you tag 50+ images? You unlock lifetime access to the AI assistant. Pretty neat, right?</p>
-  </section>
+    <h2>CONTACT</h2>
+    <p>Reach out: <a href="mailto:illco.p.learning@gmail.com">illco.p.learning@gmail.com</a></p>
 
-  <section>
-    <h2>Why?</h2>
-    <p>This project helps middle-aged creative folks escape mediocrity, build new brain pathways, and support a design intelligence tool built by the crowd. Also: women are welcome. None signed up to help yet — but maybe you'll be the first?</p>
-  </section>
+    <h2>MUSIC?</h2>
+    <p>BeerSpitNight loves music.</p>
+    <a href="https://open.spotify.com/playlist/4NgWuA0aWDaKxbKMwWnl8r?si=rKrOh28EQPS2t8dfa5xYAg" target="_blank">Spotify Playlist</a>
+  </aside>
 
-  <footer>
-    <p>Contact: <a href="mailto:illco.p.learning@gmail.com">illco.p.learning@gmail.com</a></p>
-    <div class="footer-links">
-      <a href="https://ill-cp-p3-learns-taggit.streamlit.app/" target="_blank">App</a>
-      <a href="https://open.spotify.com/playlist/4NgWuA0aWDaKxbKMwWnl8r?si=rKrOh28EQPS2t8dfa5xYAg" target="_blank">Spotify</a>
-      <a href="https://twitter.com/ill_co_p3" target="_blank">Twitter</a>
-      <a href="#" target="_blank">GitHub (link coming soon)</a>
+  <main>
+    <section>
+      <h1>The ill-Co=P3 Project</h1>
+      <p>The ill-Co=P3 Project is building a crowdsourced, AI-enhanced tool for tagging and analyzing graphic design images using core design principles and elements. By combining human insight and GPT-4 Vision, we're creating a high-quality training dataset to power the Pathfinder Graphic Design Assistant.</p>
+    </section>
+
+    <section>
+      <h2>Tagging Module — That’s What It Is</h2>
+      <p>The tagging module is a clean, login-gated interface where users review image-caption pairs and label them with relevant design principles, elements, quality ratings, and issues — all synced to Firebase in real time.</p>
+      <a href="https://ill-cp-p3-learns-taggit.streamlit.app/" class="btn">🚀 Launch Tagging App</a>
+    </section>
+
+    <section>
+      <h2>You Want Me to Do This for Free?</h2>
+      <p>Yup. It’s free. I should probably pay you. Tagging helps build an open, collaborative design intelligence model that benefits students, educators, and creators worldwide.</p>
+      <p>Plus, tag 50+ images and you’ll unlock a lifetime subscription to the Pathfinder Assistant — your AI co-pilot for design analysis, critique, and learning.</p>
+    </section>
+
+    <section>
+      <h2>Why Are You Here?</h2>
+      <p>Built to help middle-aged guys escape mediocrity, fire up new brain pathways — and yes, the page might crash. Women welcome (none signed up to spend hours building it with me). Come tag some designs. – Beerspitnight</p>
+    </section>
+
+    <div class="footer">
+      <p>Copyright © 2025 ill-Co-P3: Pathfinder & BeerSpitNight</p>
+      <p>Twitter: <a href="https://twitter.com/ill_co_p3" target="_blank">@ill_co_p3</a> | GitHub (link coming soon)</p>
     </div>
-    <p style="margin-top: 1rem;">&copy; 2025 ill-Co-P3: Pathfinder & BeerSpitNight</p>
-  </footer>
+  </main>
 
 </body>
 </html>
