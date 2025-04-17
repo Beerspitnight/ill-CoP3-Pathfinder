@@ -3,86 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The ill-Co=P3 Project###</title>
+  <title>ill-Co-P3: Pathfinder</title>
   <style>
+    :root {
+      --black: #0f0f0f;
+      --dark-gray: #1a1a1a;
+      --medium-gray: #2c2c2c;
+      --light-gray: #ccc;
+      --highlight: #ff6600;
+      --accent: #ffcc00;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      background-color: #0f0f0f;
-      color: #e0e0e0;
+      background-color: var(--black);
+      color: var(--light-gray);
       font-family: 'Segoe UI', sans-serif;
       display: flex;
-      flex-direction: row;
+      min-height: 100vh;
     }
 
     aside {
-      width: 250px;
-      background-color: #1a1a1a;
-      padding: 2rem 1rem;
-      border-right: 2px solid #2c2c2c;
-      height: 100vh;
+      width: 280px;
+      background: var(--dark-gray);
+      padding: 2rem 1.5rem;
+      border-right: 1px solid var(--medium-gray);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      max-width: 160px;
+      margin-bottom: 2rem;
+      animation: glow 2s infinite alternate;
+      filter: drop-shadow(0 0 6px var(--highlight));
     }
 
     aside h2 {
-      color: #ffcc00;
-      font-size: 1rem;
-      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: var(--accent);
+      margin-top: 2rem;
     }
 
-    aside p {
-      font-size: 0.9rem;
+    aside p, aside a {
+      font-size: 0.85rem;
+      color: var(--light-gray);
+      text-align: center;
       line-height: 1.4;
-      color: #ccc;
     }
 
     aside a {
-      display: block;
-      margin: 0.5rem 0;
-      color: #4db8ff;
       text-decoration: none;
-      font-size: 0.9rem;
+      color: var(--highlight);
+      margin: 0.25rem 0;
     }
 
     main {
       flex: 1;
-      padding: 2rem;
+      padding: 2rem 3rem;
       overflow-y: auto;
     }
 
-    .logo {
-      max-width: 175px;
-      margin-bottom: 1.5rem;
-      animation: glow 2s infinite alternate;
-      filter: drop-shadow(0 0 8px #4db8ff) brightness(1.2);
-    }
-
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
+      max-width: 800px;
     }
 
-    section h1, section h2 {
-      color: #ffcc00;
+    h1, h2 {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 1rem;
+      background: var(--highlight);
+      color: black;
       padding: 0.75rem 1.25rem;
-      background-color: #4db8ff;
-      color: #000;
-      font-weight: bold;
       border-radius: 6px;
+      font-weight: bold;
       text-decoration: none;
+      margin-top: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #e65c00;
     }
 
     .footer {
-      margin-top: 3rem;
-      font-size: 0.8rem;
-      color: #888;
+      font-size: 0.75rem;
+      color: #666;
+      margin-top: 4rem;
+    }
+
+    .footer a {
+      color: var(--highlight);
+      text-decoration: none;
     }
 
     @keyframes glow {
-      from { filter: drop-shadow(0 0 8px #4db8ff) brightness(1.2); }
-      to { filter: drop-shadow(0 0 20px #4db8ff) brightness(1.6); }
+      from { filter: drop-shadow(0 0 8px var(--highlight)); }
+      to { filter: drop-shadow(0 0 16px var(--highlight)); }
     }
   </style>
 </head>
@@ -90,51 +121,43 @@
 
   <aside>
     <img src="logo1.png" alt="ill-Co-P3 Logo" class="logo" />
-    <h2>COMPANY</h2>
-    <p>This is not a company, nor is it an organization. It’s just a dude who likes to learn new things.</p>
+    <h2>ill-Co=P3: Pathfinder - Learns?</h2>
+    <p>This is’t a company. Just a guy firing neurons and tagging designs.</p>
 
-    <h2>RESOURCES</h2>
+    <h2>Links</h2>
     <a href="https://ill-cp-p3-learns-taggit.streamlit.app/">Log In</a>
-    <a href="https://ill-cp-p3-learns-taggit.streamlit.app/">Create an Account</a>
-    <a href="https://www.freeprivacypolicy.com/live/50c9c708-de6b-4440-be9e-1aeb972e2321" target="_blank">Privacy Policy</a>
-    <a href="https://www.freeprivacypolicy.com/live/fc8b023b-a292-4e28-a044-56a29102b9f4" target="_blank">Terms of Service</a>
-
-    <h2>CONTACT</h2>
-    <p>Reach out: <a href="mailto:illco.p.learning@gmail.com">illco.p.learning@gmail.com</a></p>
-
-    <h2>MUSIC?</h2>
-    <p>Beerspit's killer playlist.</p>
-    <a href="https://open.spotify.com/playlist/4NgWuA0aWDaKxbKMwWnl8r?si=rKrOh28EQPS2t8dfa5xYAg" target="_blank">Spotify Playlist</a>
+    <a href="https://ill-cp-p3-learns-taggit.streamlit.app/">Create Account</a>
+    <a href="mailto:illco.p.learning@gmail.com">Email</a>
+    <a href="https://open.spotify.com/playlist/4NgWuA0aWDaKxbKMwWnl8r?si=rKrOh28EQPS2t8dfa5xYAg" target="_blank">Playlist</a>
+    <a href="https://www.freeprivacypolicy.com/live/50c9c708-de6b-4440-be9e-1aeb972e2321" target="_blank">Privacy</a>
+    <a href="https://www.freeprivacypolicy.com/live/fc8b023b-a292-4e28-a044-56a29102b9f4" target="_blank">Terms</a>
   </aside>
 
   <main>
     <section>
-      <h1>###The ill-Co=P3 Project###</h1>
-      <p>The ill-Co=P3 Project is building a crowdsourced, AI-enhanced tool for tagging and analyzing graphic design images using core design principles and elements. By combining human insight and GPT-4 Vision, we're creating a high-quality training dataset to power the Pathfinder Graphic Design Assistant.</p>
+      <h1>ill-Co-P3 Project</h1>
+      <p>Tag graphic design images using real visual principles — not vibes. Build a smarter AI assistant, one label at a time. It’s a mix of brainpower, brutal honesty, and occasional aesthetic brawls.</p>
     </section>
 
     <section>
-      <h2>Why Am I Here?  What is going on?</h2>
-      <p>Built to help middle-aged guys escape mediocrity, fire up new brain pathways — and yes, the page might crash. Women welcome (none signed up to spend hours building it with me). Come tag some designs. – Beerspitnight</p>
-    </section>
-    
-    <section>
-      <h2>You want me to do what? </h2>
-      <p>The tagging module is a clean, login-gated interface where users review image-caption pairs and label them with relevant design principles, elements, quality ratings, and issues — all synced to Firebase in real time.</p>
-      <a href="https://ill-cp-p3-learns-taggit.streamlit.app/" class="btn">🚀 Launch Tagging App</a>
+      <h2>Why Am I Here? What is going on?</h2>
+      <p>Built to help middle-aged guys escape mediocrity, fire up new brain pathways — and yes, the page might crash. Women welcome (none signed up to spend hours building it with me). Come tag some designs. – Beerspitnight.</p>
     </section>
 
     <section>
-      <h2>You Want Me to Do This for Free?</h2>
-      <p>Yup. It’s free. I should probably pay you. Tagging helps build an open, collaborative design intelligence model that benefits students, educators, and creators worldwide.</p>
-      <p>Plus, tag 50+ images and you’ll unlock a lifetime subscription to the Pathfinder Assistant — your AI co-pilot for design analysis, critique, and learning.</p>
+      <h2>You want me to do what?</h2>
+      <p>The tagging module is a clean, login-gated interface where users review image-caption pairs and label them with relevant design principles, elements, quality ratings, and issues — all synced to Firebase in real time..</p>
+      <a class="btn" href="https://ill-cp-p3-learns-taggit.streamlit.app/">🚀 Launch App</a>
     </section>
 
-    
+    <section>
+      <h2>Get Perks for Tagging</h2>
+      <p>Tag 50+ images, unlock forever Pathfinder AI. Not even kidding. And you help build the future of design education while looking cool in dark mode. If you will never need a design assistant, I can probably get some killer t-shirts made - I know a guy.</p>
+    </section>
 
     <div class="footer">
-      <p>Copyright © 2025 ill-Co-P3: Pathfinder & BeerSpitNight</p>
-      <p>Twitter: <a href="https://twitter.com/ill_co_p3" target="_blank">@ill_co_p3</a> | GitHub (link coming soon)</p>
+      <p>© 2025 ill-Co-P3: Pathfinder / Beerspitnight</p>
+      <p>Follow: <a href="https://twitter.com/ill_co_p3">@ill_co_p3</a></p>
     </div>
   </main>
 
